@@ -15,7 +15,7 @@ app.use("/api/contact", contactRoutes);
 
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect('mongodb+srv://supriyonag552:ch6aIqawcnG1c6br@cluster0.qyeqr4k.mongodb.net/contactDB?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
